@@ -2,13 +2,12 @@
 ---
 ## 퍼블리셔 노드
 ### import rclpy
-from rclpy.node import Node
-from rclpy.qos import QoSProfile
-from std_msgs.msg import String
+### from rclpy.node import Node
+### from rclpy.qos import QoSProfile
+### from std_msgs.msg import String
 
 ### class JogwangjongPublisher(Node):
-
- ###   def __init__(self):
+###   def __init__(self):
         super().__init__('jogwangjong_publisher')
         qos_profile = QoSProfile(depth=10)
         self.publisher = self.create_publisher(String, 'jogwangjong', qos_profile)
@@ -42,9 +41,9 @@ from std_msgs.msg import String
 ## 서브스크라이브 노드
 
 ### import rclpy
-from rclpy.node import Node
-from rclpy.qos import QoSProfile
-from std_msgs.msg import String
+### from rclpy.node import Node
+### from rclpy.qos import QoSProfile
+### from std_msgs.msg import String
 
 ### class JogwangjongSubscriber(Node):
 
@@ -58,13 +57,13 @@ from std_msgs.msg import String
             qos_profile)
         self.subscription  # prevent unused variable warning
 
- ###   def listener_callback(self, msg):
+###   def listener_callback(self, msg):
         self.get_logger().info('Received message: {0}'.format(msg.data))
 
 ### def main(args=None):
     rclpy.init(args=args)
     node = JogwangjongSubscriber()
-    try:
+### try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         node.get_logger().info('Keyboard Interrupt (SIGINT)')
