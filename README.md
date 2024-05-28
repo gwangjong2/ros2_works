@@ -1,6 +1,7 @@
 # 선박생산공학기초및실습 과제1
 ---
 ## 퍼블리셔 노드
+---
 ###
  import rclpy
  from rclpy.node import Node
@@ -36,9 +37,7 @@
 
  if __name__ == '__main__':
     main()
-
 ---
-
 ## 서브스크라이브 노드
 ###
  import rclpy
@@ -76,5 +75,3 @@
  if __name__ == '__main__':
     main()
 ---
-
-
